@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  height: 100vh;
 }
 
 
@@ -131,8 +132,8 @@
     position: absolute;
     width: 0;
     height: 0;
-    border-left: 64px solid transparent; /* Adjust size as needed */
-    border-right: 64px solid transparent; /* Adjust size as needed */
+    border-left: 64px solid transparent;
+    border-right: 64px solid transparent;
     border-top: 64px solid $very-dark-grayish-blue;
   }
 }

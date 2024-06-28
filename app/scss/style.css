@@ -4,9 +4,6 @@
     margin: 0;
     line-height: 1.3;
   }
-  .container {
-    height: 100vh;
-  }
   .article {
     flex-direction: row;
     height: 17.5rem;
@@ -62,6 +59,7 @@ body .attribution a {
   justify-content: center;
   align-items: center;
   position: relative;
+  height: 100vh;
 }
 
 .article {
@@ -172,8 +170,8 @@ body .attribution a {
   position: absolute;
   width: 0;
   height: 0;
-  border-left: 64px solid transparent; /* Adjust size as needed */
-  border-right: 64px solid transparent; /* Adjust size as needed */
+  border-left: 64px solid transparent;
+  border-right: 64px solid transparent;
   border-top: 64px solid hsl(217, 19%, 35%);
 }
 

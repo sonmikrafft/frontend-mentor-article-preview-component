@@ -10,7 +10,6 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -46,27 +45,43 @@ To see how you can add code snippets, see below:
 ```html
 <script defer src="./main.js"></script>
 ```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+- get Elements in js
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+const author = document.getElementById('author');
+```
+- Modify class names of elements
+```js
+shareBtn.className = 'dark-button';
+shareBtn.classList.add('dark-button');
+shareBtn.classList.remove('dark-button');
+shareBtn.classList.contains('dark-button');
+
+tooltip.style.visibility = 'visible';
+```
+- handle varying screen widths
+```js
+window.addEventListener('resize', function() {
+  const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  // magic!
+});
+```
+- triangle
+```css
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 64px solid transparent;
+  border-right: 64px solid transparent;
+  border-top: 64px solid red;
 }
 ```
+- Get elements position, size,...
+```js
+const tooltipRect = tooltip.getBoundingClientRect();
+width = tooltipRect.width;
+```
+- Tooltip: create outside of element with `overflow: hidden`
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 

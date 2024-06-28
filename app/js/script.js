@@ -39,7 +39,6 @@ closeBtn.addEventListener('click', function(){
 })
 
 window.addEventListener('resize', function() {
-    const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
     shareBtn.classList.remove('dark-button');
     tooltip.style.visibility = 'hidden';
     author.style.display= 'flex';
