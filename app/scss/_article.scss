@@ -1,32 +1,46 @@
+
 .container {
   padding: 3rem 2rem;
   background-color: $light-grayish-blue;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 
 .article {
   background-color: white;
   border-radius: 0.5rem;
+  display: flex;
+  max-width: 45.625rem;
   overflow: hidden;
 
   &__image {
     width: 100%;
     height: 12.5rem;
+
+    @include breakpoint-up(large) {
+      width: 285px;
+      height: 100%;
+
+      img {
+        object-position: left;
+      }
+    }
   }
 
   &__text {
-    padding: 2rem;
+    padding: 2rem 2rem 0 2rem;
+    max-width: 445px;
   }
 
   &__author {
     display: flex;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem 2rem 2rem;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    gap: 1rem;
 
     p {
       margin: 0;
@@ -43,12 +57,6 @@
     color: $grayish-blue;
   }
 
-  &__button {
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-    background-color: $light-grayish-blue;
-  }
 }
 
 .author {
@@ -57,6 +65,7 @@
     height: 2.625rem;
     border-radius: 50%;
     overflow: hidden;
+    flex-shrink: 0;
   }
 }
 
@@ -71,7 +80,7 @@
     flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
-    margin: 0 auto;
+    margin-left: auto;
 
     a {
       height: 1.25rem;
@@ -81,8 +90,13 @@
 }
 
 .btn {
-  width: 100%;
-  height: 100%;
+  height: 2rem;
+  width: 2rem;
+  margin-left: auto;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 50%;
+  background-color: $light-grayish-blue;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("/images/icon-share.svg");
@@ -94,10 +108,33 @@
 
 .dark-button {
   background-color: $desaturated-dark-blue;
+  background-image: url("/images/icon-share-light.svg");
 }
 
-.light-icon {
-  background-image: url("/images/icon-share-light.svg");
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    position: absolute;
+    padding: 1rem 3.5rem;
+    display: flex;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    background-color: $very-dark-grayish-blue;
+    color:$light-grayish-blue;
+  }
+
+  &__triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 64px solid transparent; /* Adjust size as needed */
+    border-right: 64px solid transparent; /* Adjust size as needed */
+    border-top: 64px solid $very-dark-grayish-blue;
+  }
 }
 
 

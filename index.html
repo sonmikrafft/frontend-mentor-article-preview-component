@@ -13,7 +13,7 @@
 
   <link rel="stylesheet" href="app/scss/style.css">
   <script defer src="./app/js/script.js"></script>
-  
+
   <title>Frontend Mentor | Article preview component</title>
 
 </head>
@@ -23,37 +23,57 @@
       <div class="article__image">
         <img src="images/drawers.jpg" alt="Article Image of Drawers">
       </div>
-      <div class="article__text">
-        <div class="article__title">
-          <h1>
-            Shift the overall look and feel by adding these wonderful
-            touches to furniture in your home
-          </h1>
 
-        </div>
-        <div class="article__description">
-          <p>
-            Ever been in a room and felt like something was missing? Perhaps
-            it felt slightly bare and uninviting. I’ve got some simple tips
-            to help you make any room feel complete.
-          </p>
-        </div>
-      </div>
+      <div>
+        <div class="article__text">
+          <div class="article__title">
+            <h1>
+              Shift the overall look and feel by adding these wonderful
+              touches to furniture in your home
+            </h1>
 
-      <div id="author" class="article__author">
-        <div class="author__icon">
-          <img src="images/avatar-michelle.jpg" alt="Michelle">
+          </div>
+          <div class="article__description">
+            <p>
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I’ve got some simple tips
+              to help you make any room feel complete.
+            </p>
+          </div>
         </div>
-        <div class="div">
-          <b>Michelle Appleton</b>
-          <p>28 Jun 2020</p>
-        </div>
-        <div class="article__button">
+
+        <div id="author" class="article__author">
+          <div class="author__icon">
+            <img src="images/avatar-michelle.jpg" alt="Michelle">
+          </div>
+          <div class="div">
+            <b>Michelle Appleton</b>
+            <p>28 Jun 2020</p>
+          </div>
           <div id="shareBtn" class="btn"></div>
         </div>
-      </div>
 
-      <div id="links" class="article__links">
+        <div id="links" class="article__links">
+          <div class="share__text">Share</div>
+          <div class="share__links">
+            <a href="https://www.facebook.com/" class="share__icon">
+              <img src="images/icon-facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="share__icon">
+              <img src="images/icon-twitter.svg" alt="Twitter">
+            </a>
+            <a href="https://www.pinterest.de/" class="share__icon">
+              <img src="images/icon-pinterest.svg" alt="Pinterest">
+            </a>
+          </div>
+          <div id="closeBtn" class="btn dark-button"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tooltip" class="tooltip">
+      <div class="tooltip__triangle"></div>
+      <div class="tooltip__content">
         <div class="share__text">Share</div>
         <div class="share__links">
           <a href="https://www.facebook.com/" class="share__icon">
@@ -66,11 +86,9 @@
             <img src="images/icon-pinterest.svg" alt="Pinterest">
           </a>
         </div>
-        <div class="article__button dark-button">
-          <div id="closeBtn" class="btn light-icon"></div>
-        </div>
       </div>
     </div>
+
   </main>
 
 
